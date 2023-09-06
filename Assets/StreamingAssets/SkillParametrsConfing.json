@@ -1,0 +1,10 @@
+{
+  "BluntWeapon": 1,
+  "StabbingWeapon": 2,
+  "SlashingWeapon": 3,
+  "ThrownWeapons": 4,
+  "Magic": 5,
+  "ConfigName": "SkillParametrsConfing.json",
+  "name": "SkillParametrsConfing",
+  "hideFlags": 0
+}

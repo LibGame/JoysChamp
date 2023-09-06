@@ -1,0 +1,16 @@
+{
+  "Health": 25,
+  "HealthMax": 25,
+  "Mana": 25,
+  "ManaMax": 25,
+  "Stamina": 25,
+  "StaminaMax": 25,
+  "Experience": 100.0,
+  "Money": 10,
+  "GloryPoints": 3.8,
+  "Moral": -10,
+  "Rating": 5,
+  "ConfigName": "ScoreParametrsConfig.json",
+  "name": "ScoreParametrsConfig",
+  "hideFlags": 0
+}
