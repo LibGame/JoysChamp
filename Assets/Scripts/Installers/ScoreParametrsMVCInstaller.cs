@@ -14,9 +14,10 @@ namespace Assets.Scripts.Installers
         
         public override void InstallBindings()
         {
-            Container.Bind<IScoreParametrsViewInterface>().FromInstance(_scoreParametrsView).AsSingle();
-            Container.Bind<ScoreParametrsController>().FromInstance(_scoreParametrsController).AsSingle();
-            Container.Bind<ScoreParametrsModel>().FromInstance(_scoreParametrsModel).AsSingle();
+            Container.Bind<IScoreParametrsViewInterface>().To<ScoreParametrsView>().FromInstance(_scoreParametrsView);
+            Container.Bind<ScoreParametrsController>().FromInstance(_scoreParametrsController);
+            Container.Bind<IScoreParametrModel>().To<ScoreParametrsModel>().FromInstance(_scoreParametrsModel);
+            Container.Bind<IScoreParametrsInit>().To<ScoreParametrsModel>().FromInstance(_scoreParametrsModel);
         }
     }
 }

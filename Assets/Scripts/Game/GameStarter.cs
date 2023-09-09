@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Game.Interfaces;
 using Assets.Scripts.GameData.Interfaces;
+using Assets.Scripts.PlayerMVC;
 using Assets.Scripts.ScoreParametrsMVC;
 using Assets.Scripts.SkillParametrsMVC;
 using System;
@@ -11,10 +12,10 @@ namespace Assets.Scripts.Game
 {
     public class GameStarter : MonoBehaviour , IGameStarter
     {
-        [Inject] private ScoreParametrsController _scoreParametrsController;
-        [Inject] private SkillParametrsController _skillParametrsController;
+
         [Inject] private IConfigFilesReader _configFilesReader;
         [Inject] private GameLoop _gameLoop;
+        [Inject] private PlayerController _playerController;
 
         public event Action OnGameStarted;
 
@@ -26,8 +27,7 @@ namespace Assets.Scripts.Game
 
         public void StartGame()
         {
-            _scoreParametrsController.Init();
-            _skillParametrsController.Init();
+            _playerController.Init();
             _gameLoop.StartGameLoop();
             OnGameStarted?.Invoke();
         }

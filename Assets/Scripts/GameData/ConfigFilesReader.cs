@@ -22,6 +22,7 @@ namespace Assets.Scripts.GameData
 
         public void LoadConfigs()
         {
+            _initedConfigurations = 0;
             _configs.Add(_scoreParametrsConfig);
             _configs.Add(_skillParametrsConfing);
 

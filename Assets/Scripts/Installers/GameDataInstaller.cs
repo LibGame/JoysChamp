@@ -1,6 +1,7 @@
 ﻿using Assets.Scripts.GameData;
 using Assets.Scripts.GameData.Configs;
 using Assets.Scripts.GameData.Interfaces;
+using Assets.Scripts.ScoreParametrsMVC.Interfaces;
 using System.Collections;
 using UnityEngine;
 using Zenject;
